@@ -27,7 +27,7 @@ function addItem(item) {
 
 //// checks whether the item is already on the list,
 //  ignoring capital letters.
-const alreadyThere = shopppingList.some(
+const alreadyThere = shoppingList.some(
     (existing) => existing.toLowerCasr() === item.toLowerCase()
 
 );
@@ -51,5 +51,27 @@ const removeBtn = document.getElementById("removeBtn");
 const itemList = document.getElementById("itemList")
 
 
+/////renderList = add the items to HTML
+
+function renderList() {
+  itemList.innerHTML = "";              // wipe the old list
+  shoppingList.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    itemList.appendChild(li);
+  });
+}
+
+/////addBtn
+addBtn.addEventListener("click", () => {
+    addItem(itemInput.value);
+    itemInput.value = "";
+    renderList();
+});
+
+removeBtn.addEventListener("click", () => {
+    removeLastItem();
+    renderList();
+});
 
 
