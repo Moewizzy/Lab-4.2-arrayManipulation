@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>(ShopppingList)Arrays-Lab.4.2</title>
+  </head>
+
+  
+  <body>
+    <main>
+      <h1>Shopping List</h1>
+
+      <!-- input field and button -->
+      <div class="controls">
+        <label for="itemInput" class="visually-hidden">Item name</label>
+        <input
+          type="text"
+          id="itemInput"
+          placeholder="Type an item, like Milk"
+        />
+        <button id="addBtn">Add Item</button>
+        <button id="removeBtn">Remove Last Item</button>
+      </div>
+
+      <!-- search box (filterItems()) -->
+      <div class="controls">
+        <label for="searchInput" class="visually-hidden">Search items</label>
+        <input type="text" id="searchInput" placeholder="Search your list" />
+      </div>
+
+      <p id="message" role="status"></p>
+
+      <!-- List -->
+       <ul id="itemList"></ul>
+
+    </main>
+  </body>
+</html>
